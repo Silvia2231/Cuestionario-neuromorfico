@@ -1,0 +1,49 @@
+index.html<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario de Hardware Neuroinspirado</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Cuestionario sobre Hardware Neuroinspirado</h1>
+
+        <div id="login">
+            <h3>Ingresa tu nombre</h3>
+            <input type="text" id="studentName" placeholder="Escribe tu nombre">
+            <button onclick="startQuiz()">Iniciar Cuestionario</button>
+        </div>
+
+        <div id="quiz" style="display:none;">
+            <h2 id="welcome"></h2>
+            <div id="questionContainer"></div>
+            <button id="nextBtn" onclick="nextQuestion()">Siguiente</button>
+        </div>
+
+        <div id="result" style="display:none;">
+            <h2>Resultados</h2>
+            <p id="score"></p>
+            <p id="details"></p>
+        </div>
+    </div>
+
+    <!-- CHATBOT -->
+    <div class="chatbot-icon" onclick="toggleChat()">
+        🤖
+    </div>
+
+    <div class="chatbot-window" id="chatWindow">
+        <div class="chat-header">ChatBot Neuromórfico</div>
+        <div class="chat-body" id="chatBody"></div>
+        <div class="chat-input-container">
+            <input id="chatInput" type="text" placeholder="Pregunta algo..." onkeypress="sendWithEnter(event)">
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
